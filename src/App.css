@@ -1,38 +1,84 @@
-.App {
+.header {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar-dark {
+  background-color: #00914d;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.card {
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.card:hover {
+  background-color: #00914d;
   color: white;
+  box-shadow: 2px 2px lightgrey;
+  border-color: grey;
 }
 
-.App-link {
-  color: #61dafb;
+.card-img {
+  object-fit: cover;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Animation set */
+.card:nth-child(2) {
+  animation-delay: 0.25s;
+}
+
+.card:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+.card:nth-child(4) {
+  animation-delay: 0.75s;
+}
+
+.card:nth-child(5) {
+  animation-delay: 1s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 320px) {
+  .card {
+    width: 90%;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
   }
-  to {
-    transform: rotate(360deg);
+  .card-img {
+      height: 45vw;
+  }
+}
+
+/* Medium devices (laptops, 720px and up) */
+@media (min-width: 720px) {
+  .card {
+    width: 90%;
+    margin-top: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  .card-img {
+      height: 25vw;
+  }
+}
+
+/* Medium devices (desktops, 1080px and up) */
+@media (min-width: 1000px) {
+  .card {
+    width: 95%;
+    margin-top: 1%;
+  }
+  .card-img {
+      height: 13vw;
   }
 }
