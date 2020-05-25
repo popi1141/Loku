@@ -3,10 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import Seattle from './Seattle.json';
+import Tacoma from './Seattle.json';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App SeattleData = {Seattle} TacomaData = {Tacoma}/>
   </React.StrictMode>,
   document.getElementById('root')
 );

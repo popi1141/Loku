@@ -12,6 +12,8 @@ const EXAMPLE_STORES = [
 
 export class App extends Component {
   render() {
+    console.log(this.props.SeattleData);
+    console.log(this.props.TacomaData);
     return (
       <Fragment>
         <LokuNav/> 
