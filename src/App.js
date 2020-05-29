@@ -3,6 +3,7 @@ import { Navbar, Nav, NavItem, NavDropdown, MenuItem, Form, Button, Toast, Conta
 import './App.css';
 import CardGenerator from './CardGenerator';
 import LokuNav from './LokuNav';
+import LikeButton from './likeButton'
 
 const EXAMPLE_STORES = [  
   { imgURL: 'img/farm1.jpg',  storeTitle: 'Potato Corner', storeDesc: 'insertNameHere'},
@@ -16,6 +17,7 @@ export class App extends Component {
     console.log(this.props.TacomaData);
     return (
       <Fragment>
+        <LikeButton></LikeButton>
         <LokuNav/> 
         <CardGenerator data={EXAMPLE_STORES}/>
       </Fragment>
