@@ -1,8 +1,8 @@
 import React, { useState, Fragment, Component }  from 'react';
-import { Navbar, Nav, NavItem, NavDropdown, MenuItem, Form, Button, Toast, Container, Jumbotron, FormControl, Card, Row, CardColumns, Col} from 'react-bootstrap';
 import './App.css';
-import CardGenerator from './CardGenerator';
-import LokuNav from './LokuNav';
+import LokuPage from './LokuPage';
+import {Card, Row, Col, Navbar, Nav, NavDropdown, Button} from 'react-bootstrap';
+import { Route, Switch, Link, NavLink, Redirect} from 'react-router-dom'; //use switch around routes so you don't need if/else statements
 
 const EXAMPLE_STORES = [  
   { imgURL: 'img/farm1.jpg',  storeTitle: 'Potato Corner', storeDesc: 'insertNameHere'},
@@ -12,129 +12,117 @@ const EXAMPLE_STORES = [
 
 export class App extends Component {
   render() {
-    console.log(this.props.SeattleData);
-    console.log(this.props.TacomaData);
+    let SeattleData = this.props.SeattleData;
+    let TacomaData = this.props.TacomaData;
     return (
       <Fragment>
         <LokuNav/> 
-        <CardGenerator data={EXAMPLE_STORES}/>
+        <Switch>
+          <Route exact path ="/" render={(routerProps) => (
+            <CardGenerator {...routerProps} data={SeattleData.Food} title="Food Places in Seattle"/>
+          )}/>
+          <Route path ="/seattle/food" render={(routerProps) => (
+            <CardGenerator {...routerProps} data={SeattleData.Food} />
+          )}/>
+          <Route path ="/seattle/produce" render={(routerProps) => (
+          <CardGenerator {...routerProps} data={SeattleData.Produce} />
+          )}/>
+          <Route path ="/seattle/crafts" render={(routerProps) => (
+            <CardGenerator {...routerProps} data={SeattleData.Crafts} />
+          )}/>
+          <Route path ="/tacoma/food" render={(routerProps) => (
+            <CardGenerator {...routerProps} data={TacomaData.Food} />
+          )}/>
+          <Route path ="/tacoma/produce" render={(routerProps) => (
+            <CardGenerator {...routerProps} data={TacomaData.Produce} />
+          )}/>
+          <Route path ="/tacoma/crafts" render={(routerProps) => (
+            <CardGenerator {...routerProps} data={TacomaData.Crafts} />
+          )}/>
+          <Route path ="/lokupage" component={LokuPage}/>
+        </Switch>
       </Fragment>
     );
   }
 }
 
+export class LokuNav extends Component {
+  render() {
+    return (
+      <Navbar variant="dark" expand="lg" bg="green">
+        <Navbar.Brand href="/">
+          <img
+          alt=""
+          src="/img/minilogo.png"
+          width="60"
+          height="30"
+          className="d-inline-block align-top"
+          />{' '}
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="mr-auto">
+            <Nav.Link href="#link">About</Nav.Link>
+            <NavDropdown title="Select A Category" id="basic-nav-dropdown">
+              <NavDropdown.Item as={Link} to="/seattle/food"> Seattle - Food</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item as={Link} to="/seattle/crafts">Seattle - Crafts</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item as={Link} to="/seattle/produce"> Seattle - Produce</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item as={Link} to="/tacoma/food"> Tacoma - Food</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item as={Link} to="/tacoma/crafts">Tacoma - Crafts</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item as={Link} to="/tacoma/produce"> Tacoma - Produce</NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
+    );
+  }
+}
+
+
+export class CardGenerator extends Component {
+  render() {
+    console.log(this.props.data);
+    let cards = this.props.data.map((store) => {
+      return <LokuCard storeData={store} key={store.Name}/>;
+    });
+    return (
+      <Fragment>
+        {cards}
+      </Fragment>
+    );
+  }
+}
+
+export class LokuCard extends Component {
+  render() {
+    let storeData = this.props.storeData;
+    let imgURL = "/img/" + storeData.Name.toLowerCase() + ".jpg";
+    return (
+      <Card className="mb-3">
+        <Row noGutters={true}>
+          <Col md="4">
+            <Card.Img src = {imgURL}/>
+          </Col>
+          <Col md="8">
+            <Card.Body>
+              <Card.Title>
+                {storeData.Name}
+              </Card.Title>
+              <Card.Text>
+                {storeData.Description}
+              </Card.Text>
+            </Card.Body>
+          </Col>
+        </Row>
+      </Card>
+    );
+  }
+}
+
+
 export default App;
-
-
-// class Start extends React.Component {
-//   get show() {
-//     return this.props.activeSection === "start";
-//   }
-
-//   render() {
-//     if (this.show) {
-//       return <div className="start"> Start </div>;
-//     } else {
-//       return null;
-//     }
-//   }
-// }
-
-// class About extends React.Component {
-//   get show() {
-//     return this.props.activeSection === "about";
-//   }
-
-//   render() {
-//     if (this.show) {
-//       return <div className="about"> About </div>;
-//     } else {
-//       return null;
-//     }
-//   }
-// }
-
-// class Skills extends React.Component {
-//   get show() {
-//     return this.props.activeSection === "skills";
-//   }
-
-//   render() {
-//     if (this.show) {
-//       return <div className="skills"> Skills </div>;
-//     } else {
-//       return null;
-//     }
-//   }
-// }
-
-// class Contact extends React.Component {
-//   get show() {
-//     return this.props.activeSection === "contact";
-//   }
-
-//   render() {
-//     if (this.show) {
-//       return <div className="contact"> Contact </div>;
-//     } else {
-//       return null;
-//     }
-//   }
-// }
-
-// const Buttons = ({ onToggle }) => (
-//   <div className="buttons">
-//     <button name="start" onClick={onToggle}>
-//       Start
-//     </button>
-//     <button name="about" onClick={onToggle}>
-//       About
-//     </button>
-//     <button name="skills" onClick={onToggle}>
-//       Skills
-//     </button>
-//     <button name="contact" onClick={onToggle}>
-//       Contact
-//     </button>
-//   </div>
-// );
-
-// const Main = ({ activeSection }) => (
-//   <React.Fragment>
-//     <Start activeSection={activeSection} />
-//     <About activeSection={activeSection} />
-//     <Skills activeSection={activeSection} />
-//     <Contact activeSection={activeSection} />
-//   </React.Fragment>
-// );
-
-// class App extends React.Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {
-//       activeSection: ""
-//     };
-
-//     this.handleToggleSection = this.handleToggleSection.bind(this);
-//   }
-
-//   handleToggleSection(e) {
-//     const { name } = e.target;
-//     this.setState(() => ({
-//       activeSection: name
-//     }));
-//   }
-
-//   render() {
-//     return (
-//       <div className="App">
-//         <Buttons onToggle={this.handleToggleSection} />
-//         <Main activeSection={this.state.activeSection} />
-//       </div>
-//     );
-//   }
-// }
-
-// ReactDOM.render(<App />, document.getElementById("root"));
-
-// export default App;

@@ -5,11 +5,12 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import Seattle from './Seattle.json';
 import Tacoma from './Seattle.json';
+import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <BrowserRouter>
     <App SeattleData = {Seattle} TacomaData = {Tacoma}/>
-  </React.StrictMode>,
+  </BrowserRouter>,
   document.getElementById('root')
 );
 

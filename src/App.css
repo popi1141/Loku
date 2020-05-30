@@ -6,12 +6,18 @@
   background-color: #00914d;
 }
 
+.dropdown-item:active, .dropdown-item:hover {
+  background-color: #00914d;
+  color: white;
+}
+
 .card {
   opacity: 0;
   animation-name: fadeIn;
   animation-duration: 1s;
   animation-fill-mode: forwards;
 }
+
 
 .card:hover {
   background-color: #00914d;
