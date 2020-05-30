@@ -3,6 +3,7 @@ import './App.css';
 import LokuPage from './LokuPage';
 import {Card, Row, Col, Navbar, Nav, NavDropdown, Button} from 'react-bootstrap';
 import { Route, Switch, Link, NavLink, Redirect} from 'react-router-dom'; //use switch around routes so you don't need if/else statements
+import LikeButton from './likeButton'
 
 const EXAMPLE_STORES = [  
   { imgURL: 'img/farm1.jpg',  storeTitle: 'Potato Corner', storeDesc: 'insertNameHere'},
@@ -16,6 +17,7 @@ export class App extends Component {
     let TacomaData = this.props.TacomaData;
     return (
       <Fragment>
+        <LikeButton></LikeButton>
         <LokuNav/> 
         <Switch>
           <Route exact path ="/" render={(routerProps) => (
