@@ -3,13 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import Seattle from './Seattle.json';
-import Tacoma from './Seattle.json';
+import Data from './Data.json';
 import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.render(
   <BrowserRouter>
-    <App SeattleData = {Seattle} TacomaData = {Tacoma}/>
+    <App Data = {Data}/>
   </BrowserRouter>,
   document.getElementById('root')
 );

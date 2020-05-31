@@ -30,6 +30,19 @@
   object-fit: cover;
 }
 
+.recoText, .deliverytext {
+  color: green;
+}
+
+.deliverytext {
+  font-size: 1.5em;
+}
+
+.recoText {
+  text-align: center;
+  font-size: 1.25em;
+}
+
 /* Animation set */
 .card:nth-child(2) {
   animation-delay: 0.25s;
@@ -54,7 +67,7 @@
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 320px) {
-  .card {
+  .card, .alertSpacer {
     width: 90%;
     margin-top: 5%;
     margin-left: 5%;
@@ -63,18 +76,29 @@
   .card-img {
       height: 45vw;
   }
+  .restosection {
+    width: 85%;
+    margin-left: 7.5%;
+    margin-right: 7.5%;
+    margin-top: 3%;
+  } 
 }
 
 /* Medium devices (laptops, 720px and up) */
 @media (min-width: 720px) {
-  .card {
+  .card, .alertSpacer {
     width: 90%;
-    margin-top: 2%;
     margin-left: 2%;
     margin-right: 2%;
   }
+  .card {
+    margin-top: 2%;
+  }
   .card-img {
       height: 25vw;
+  }
+  .restosection, .alertSpacer {
+    margin-top: 1%;
   }
 }
 
