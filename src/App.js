@@ -5,11 +5,11 @@ import {Card, Row, Col, Navbar, Nav, NavDropdown, Container, Alert} from 'react-
 import { Route, Switch, Link, Redirect} from 'react-router-dom'; //use switch around routes so you don't need if/else statements
 import LikeButton from './likeButton'
 
-const EXAMPLE_STORES = [  
-  { imgURL: 'img/farm1.jpg',  storeTitle: 'Potato Corner', storeDesc: 'insertNameHere'},
-  { imgURL: 'img/farm2.jpg',  storeTitle: 'Turnip Town', storeDesc: 'insertNameHere'},
-  { imgURL: 'img/farm3.jpg',  storeTitle: 'Radish Central', storeDesc: 'insertNameHere'}
-];
+// const EXAMPLE_STORES = [  
+//   { imgURL: 'img/farm1.jpg',  storeTitle: 'Potato Corner', storeDesc: 'insertNameHere'},
+//   { imgURL: 'img/farm2.jpg',  storeTitle: 'Turnip Town', storeDesc: 'insertNameHere'},
+//   { imgURL: 'img/farm3.jpg',  storeTitle: 'Radish Central', storeDesc: 'insertNameHere'}
+// ];
 
 export class App extends Component {
   render() {
