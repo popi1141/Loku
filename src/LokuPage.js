@@ -1,4 +1,4 @@
-import React, { useState, Fragment, Component }  from 'react';
+import React, {Component }  from 'react';
 import {Card, Row, Col, Container} from 'react-bootstrap';
 import './App.css';
 import _ from 'lodash';
@@ -22,12 +22,12 @@ export class LokuPage extends Component {
   render() {
     let data = this.state.storeData;
     if(!data) return <h1>No store specified</h1>
-    let imgPath = "/img/" + this.state.storeData.Name + ".jpg";
+    let imgPath = "/img/" + this.state.storeData.Name.toLowerCase() + ".jpg";
     return (
       <Container fluid className="restosection">
         <Row>
           <Col md="4">
-            <img src={imgPath} className="img-fluid rounded"/>
+            <img src={imgPath} className="img-fluid rounded" alt="the business in question"/>
           </Col>
           <Col md="8">
             <h1> {data.Name} </h1>
