@@ -46,7 +46,7 @@ export class LokuCard extends Component {
         <Card className="mb-3" onClick={this.handleClick}>
             <Row noGutters={true}>
             <Col md="4">
-                <Card.Img src = {imgURL} alt="A picture of {storeData.Name}"/>
+                <Card.Img src = {imgURL} alt="the business being discussed"/>
             </Col>
             <Col md="8">
                 <Card.Body>

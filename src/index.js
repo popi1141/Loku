@@ -1,3 +1,4 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
@@ -5,6 +6,9 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import Data from './Data.json';
 import { BrowserRouter } from 'react-router-dom';
+import firebase from 'firebase/app';
+import 'firebase/database';
+
 
 ReactDOM.render(
   <BrowserRouter>

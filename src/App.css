@@ -13,8 +13,6 @@ body {
   color: white;
 }
 
-
-
 .card {
   opacity: 0;
   animation-name: fadeIn;
@@ -78,6 +76,7 @@ footer {
 .recotext, .jumbotron, footer, header {
   text-align: center;
 }
+
 
 /* Animation set */
 .card:nth-child(2) {
