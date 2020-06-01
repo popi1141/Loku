@@ -11,7 +11,7 @@ export class LokuPage extends Component {
     super(props);
     this.state = {storeData: undefined};
   }
-
+  //Calls Firebase When Component Is Mounted
   componentDidMount() {
     let city = this.props.match.params.cityName; 
     let category = this.props.match.params.categoryName; 
@@ -23,7 +23,6 @@ export class LokuPage extends Component {
         this.setState({storeData: storeObj});
     });
   }
-
   render() {
     let data = this.state.storeData;
     if(!data) return <h1>No store specified</h1>

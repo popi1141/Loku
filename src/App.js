@@ -11,6 +11,7 @@ import { Route, Switch, Redirect} from 'react-router-dom'; //use switch around r
 export class App extends Component 
 {
   render() {
+     //Routes to different areas
     return (
       <Fragment>
         <header>
