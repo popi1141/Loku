@@ -36,7 +36,7 @@ export class LokuCard extends Component {
         let storeData = this.props.storeData;
         let city = this.props.city;
         let category = this.props.category;
-        let imgURL = "/img/" + storeData.Name.toLowerCase() + ".jpg";
+        let imgURL = "/img/" + storeData.Name + ".jpg";
 
         if(this.state.shouldRedirect) {
         return <Redirect push to={"/lokupage/" + city + "/" + category + "/" + storeData.Name} />
