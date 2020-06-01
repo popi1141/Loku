@@ -22,7 +22,7 @@ export class LokuPage extends Component {
   render() {
     let data = this.state.storeData;
     if(!data) return <h1>No store specified</h1>
-    let imgPath = "/img/" + this.state.storeData.Name.toLowerCase() + ".jpg";
+    let imgPath = "/img/" + this.state.storeData.Name + ".jpg";
     return (
       <Container fluid className="restosection">
         <Row>
