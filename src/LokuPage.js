@@ -2,7 +2,9 @@ import React, {Component }  from 'react';
 import {Card, Row, Col, Container} from 'react-bootstrap';
 import './App.css';
 import _ from 'lodash';
-import Data from './Data.json';
+import * as firebase from 'firebase/app';
+import 'firebase/database';
+import "firebase/auth";
 
 export class LokuPage extends Component {
   constructor(props){
@@ -10,14 +12,17 @@ export class LokuPage extends Component {
     this.state = {storeData: undefined};
   }
 
-  componentDidMount(){
+  componentDidMount() {
     let city = this.props.match.params.cityName; 
     let category = this.props.match.params.categoryName; 
     let businessName = this.props.match.params.businessName; 
-    let storeObj =  _.find(Data[city][category], {Name: businessName});
-    this.setState({storeData: storeObj});
+    let firebaseRef = firebase.database().ref();
+    firebaseRef.once('value', (snapshot) => {
+        let database = snapshot.val();
+        let storeObj =  _.find(database[city][category], {Name: businessName});
+        this.setState({storeData: storeObj});
+    });
   }
-
 
   render() {
     let data = this.state.storeData;

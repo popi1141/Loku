@@ -7,11 +7,28 @@ import LokuNav from './LokuNav';
 import CardGenerator from './CardGenerator';
 import LokuFooter from './LokuFooter';
 import { Route, Switch, Redirect} from 'react-router-dom'; //use switch around routes so you don't need if/else statements
+import * as firebase from 'firebase/app';
+import 'firebase/database';
+import "firebase/auth";
 
-export class App extends Component {
+export class App extends Component 
+{
+  constructor(props){
+    super(props);
+    this.state = {Data: undefined};
+  }
+
+  componentDidMount() {
+    let firebaseRef = firebase.database().ref();
+    firebaseRef.once('value', (snapshot) => {
+        let database = snapshot.val();
+        this.setState({SeattleData: database.Seattle, TacomaData: database.Tacoma});
+    });
+  }
+  
   render() {
-    let SeattleData = this.props.Data.Seattle;
-    let TacomaData = this.props.Data.Tacoma;
+    let SeattleData = this.state.SeattleData;
+    let TacomaData = this.state.TacomaData;
     return (
       <Fragment>
         <header>
