@@ -6,11 +6,13 @@ import * as firebase from 'firebase/app';
 import 'firebase/database';
 import "firebase/auth";
 
+//Creates the restaurant page
 export class LokuPage extends Component {
   constructor(props){
     super(props);
     this.state = {storeData: undefined};
   }
+
   //Calls Firebase When Component Is Mounted
   componentDidMount() {
     let city = this.props.match.params.cityName; 
@@ -23,10 +25,16 @@ export class LokuPage extends Component {
         this.setState({storeData: storeObj});
     });
   }
+
   render() {
     let data = this.state.storeData;
-    if(!data) return <h1>No store specified</h1>
-    let imgPath = "/img/" + this.state.storeData.Name + ".jpg";
+    //While data is loading
+    if(!data) return <h1>Loading...</h1>
+    let imgPath = "/img/" + data.Name + ".jpg";
+    //Creates a set of ReviewCard elements
+    let cards = data.Reviews.map((reviewData) => {
+      return <ReviewCard reviewData={reviewData}/>;
+    });
     return (
       <Container fluid className="restosection">
         <Row>
@@ -40,21 +48,26 @@ export class LokuPage extends Component {
               <li> Location: {data.Location} </li> 
               <li> Hours: {data.Hours} </li> 
               <li> Description: {data.Description} </li> 
-              <li> Rating: {data.Stars} </li> 
+              <li> Likes: {data.Likes} </li> 
             </ul>
           </Col>
         </Row>
         <hr/>
+        {cards}
+      </Container>
+    );
+  }
+}
+
+//Creates a single review card
+export class ReviewCard extends Component {
+  render() {
+    return (
+      <Container>
         <Card className="mb-2">
           <Card.Body> 
-            <Card.Title>{data.Reviewer1}</Card.Title>
-            <Card.Text>{data.Review1}</Card.Text>
-          </Card.Body> 
-        </Card>
-        <Card className="mb-2">
-          <Card.Body> 
-            <Card.Title>{data.Reviewer2}</Card.Title>
-            <Card.Text>{data.Review2}</Card.Text>
+            <Card.Title>{this.props.reviewData.Reviewer}</Card.Title>
+            <Card.Text>{this.props.reviewData.ReviewText}</Card.Text>
           </Card.Body> 
         </Card>
       </Container>

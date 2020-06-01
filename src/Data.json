@@ -4,105 +4,159 @@
           {
               "Name": "Portage Bay Cafe",
               "Description": "Daytime restaurant for sustainable breakfasts, lunches & brunches & a nuts-&-fruits toppings bar.",
-              "Stars": "5/5",
+              "Likes": 35,
               "Hours": "8AM-1PM",
               "Location": "Seattle",
-              "Review1": "It's as if I died and went to sustainable and locally grown heaven. The menu has a list of where they get their groceries from and how far it is, to demonstrate how locally grown things are -- I've never been to a restaurant that has done that before and they should be proud!",
-              "Reviewer1": "3/12/2020 - Ms. Theresa",
-              "Review2":  "Once a little-known secret, Portage Bay now has four locations and sets a standard for the Seattle brunch scene. Their claim to fame is the breakfast bar. If you order French toast or pancakes of any variety, you'll access a buffet of all the berries, nuts and homemade cream your heart desires. Or however much it can handle in one sitting. Whichever comes first.",
-              "Reviewer2": "1/3/2020 - Mr. Issac"
+              "Reviews" : [
+                  {
+                    "ReviewText" : "It's as if I died and went to sustainable and locally grown heaven. The menu has a list of where they get their groceries from and how far it is, to demonstrate how locally grown things are -- I've never been to a restaurant that has done that before and they should be proud!",
+                    "Reviewer": "3/12/2020 - Ms. Theresa"
+                  },
+                  {
+                    "ReviewText":  "Once a little-known secret, Portage Bay now has four locations and sets a standard for the Seattle brunch scene. Their claim to fame is the breakfast bar. If you order French toast or pancakes of any variety, you'll access a buffet of all the berries, nuts and homemade cream your heart desires. Or however much it can handle in one sitting. Whichever comes first.",
+                    "Reviewer": "1/3/2020 - Mr. Issac"
+                  }     
+              ]
           },
           {
               "Name": "Witness",
               "Description": "Witness is a Southern-influenced restaurant and craft cocktail bar, in Seattle’s Capitol Hill neighborhood, that places emphasis on warm hospitality and premium-quality food and beverages.",
-              "Stars": "4.6/5",
+              "Likes": 50,
               "Hours": "4PM-2AM",
               "Location": "Seattle",
-              "Review1": "Chicken and Waffle!!!!!!! What we all are here for!!! Excellent! The chicken was crispy and seasoned well. Great portion size. The waffles were perfect! Not thin, fluffy! Touch sweet but not overly powerful. They came with extra syrup and then I added a dash or so of hot sauce. It was perfection!",
-              "Reviewer1": "1/18/2020 - Ms. Athene",
-              "Review2":  "You don't know what you got til it's gone. In this case, 'it' is grabbing happy hour at Witness in Cap Hill. This place has everything you need: long hours, cozy vibes, tasty plates, and stroooonnnggg cocktails. My fave items to get for a quick bite and drink are the Fried Pickles and the Son of a Preacher Man.",
-              "Reviewer2": "4/20/2020 - Ms. Alison"
+              "Reviews" : [
+                  {
+                    "ReviewText" :  "Chicken and Waffle!!!!!!! What we all are here for!!! Excellent! The chicken was crispy and seasoned well. Great portion size. The waffles were perfect! Not thin, fluffy! Touch sweet but not overly powerful. They came with extra syrup and then I added a dash or so of hot sauce. It was perfection!",
+                    "Reviewer": "1/18/2020 - Ms. Athene"
+                  },
+                  {
+                    "ReviewText":  "You don't know what you got til it's gone. In this case, 'it' is grabbing happy hour at Witness in Cap Hill. This place has everything you need: long hours, cozy vibes, tasty plates, and stroooonnnggg cocktails. My fave items to get for a quick bite and drink are the Fried Pickles and the Son of a Preacher Man.",
+                    "Reviewer": "4/20/2020 - Ms. Alison"
+                  }     
+              ]
           },
           {
               "Name": "Wann Yen",
               "Description": "Compact counter-serve spot featuring traditional Thai fare, including desserts & shaved ice.",
-              "Stars": "4.6/5",
+              "Likes": 30,
               "Hours": "12PM - 3PM",
               "Location": "Seattle",
-              "Review1": "What an absolute gem in U District. It has a few solid Thai street food options and some delicious desserts. The location is almost hidden behind the construction but do make an effort to go visit and support Wann Yen. It'll be worth it. For dinner, I enjoyed a perfectly portioned order of Khao Mun Gai, which came with a bowl of broth and served with yummy dipping sauce. Just a note that the sauce is garlic heavy so make sure you are ok with garlic breath for a while. Even though I had enough to eat at dinner, I couldn't resist trying the Roti with Coconut Ice Cream for dessert. The roti was warm, buttery, and little crispy. The coconut ice cream was cool, refreshing, and light. It was the best dessert I could've asked for.",
-              "Reviewer1": "9/2/2019 - Ms. Yi",
-              "Review2":  "I LOVE coming here for their condensed milk roti! It is a bit pricey for one roll but it is sooo yummy along with all their other desserts! I've never tried their food and have been meaning to try it forever. (I will eventually do it!)",
-              "Reviewer2": "3/25/2020 - Ms. Krystal"
+              "Reviews" : [
+                  {
+                    "ReviewText" :  "What an absolute gem in U District. It has a few solid Thai street food options and some delicious desserts. The location is almost hidden behind the construction but do make an effort to go visit and support Wann Yen. It'll be worth it. For dinner, I enjoyed a perfectly portioned order of Khao Mun Gai, which came with a bowl of broth and served with yummy dipping sauce. Just a note that the sauce is garlic heavy so make sure you are ok with garlic breath for a while. Even though I had enough to eat at dinner, I couldn't resist trying the Roti with Coconut Ice Cream for dessert. The roti was warm, buttery, and little crispy. The coconut ice cream was cool, refreshing, and light. It was the best dessert I could've asked for.",
+                    "Reviewer": "9/2/2019 - Ms. Yi"
+                  },
+                  {
+                    "ReviewText":  "I LOVE coming here for their condensed milk roti! It is a bit pricey for one roll but it is sooo yummy along with all their other desserts! I've never tried their food and have been meaning to try it forever. (I will eventually do it!)",
+                    "Reviewer": "3/25/2020 - Ms. Krystal"
+                  }     
+              ]
           }
       ],
       "Produce": [
           {
               "Name": "Potato Nation",
               "Description": "We're a group of farmers located in the Seattle suburbs and are selling potatoes to the public due to the lack of resturants picking them up.",
-              "Stars": "5/5",
+              "Likes": "5/5",
               "Hours": "10AM-5PM",
               "Location": "Seattle",
-              "Review1": "Amazing potato farm with an amazing customer service team. They really cared about our wellbeing and they have quality products. My favorite is their homemade mashed Potatoes",
-              "Reviewer1": "4/20/2020 - Mr. Rogers",
-              "Review2":  "I love their farm fresh potatoes and yummy snacks. Its a must visit place!",
-              "Reviewer2": "3/25/2020 - Mr. Pots"
+              "Reviews" : [
+                  {
+                    "ReviewText" :  "Amazing potato farm with an amazing customer service team. They really cared about our wellbeing and they have quality products. My favorite is their homemade mashed Potatoes",
+                    "Reviewer": "4/20/2020 - Mr. Rogers"
+                  },
+                  {
+                    "ReviewText":  "I love their farm fresh potatoes and yummy snacks. Its a must visit place!",
+                    "Reviewer": "3/25/2020 - Mr. Pots"
+                  }     
+              ]
           },
           {
               "Name": "Turnip Town",
               "Description": "We're a turnip plantation in the outskirts of seattle dedicated to raising organic and healthy turnips fit for consumption by anymarket.",
-              "Stars": "4/5",
+              "Likes": 124,
               "Hours": "10AM-5PM",
               "Location": "Seattle",
-              "Review1": "Amazing potato farm with an amazing customer service team. They really cared about our wellbeing and they have quality products. My favorite is their homemade mashed Potatoes",
-              "Reviewer1": "4/20/2020 - Mr. Rogers",
-              "Review2":  "I love their farm fresh potatoes and yummy snacks. Its a must visit place!",
-              "Reviewer2": "3/25/2020 - Mr. Pots"
+              "Reviews" : [
+                  {
+                    "ReviewText" :  "Amazing potato farm with an amazing customer service team. They really cared about our wellbeing and they have quality products. My favorite is their homemade mashed Potatoes",
+                    "Reviewer": "4/20/2020 - Mr. Rogers"
+                  },
+                  {
+                    "ReviewText":  "I love their farm fresh potatoes and yummy snacks. Its a must visit place!",
+                    "Reviewer": "3/25/2020 - Mr. Pots"
+                  }     
+              ]
           },
           {
               "Name": "Onion Observatory",
               "Description": "Delivering the best onions in the Seattle metro area since 1996",
-              "Stars": "4/5",
+              "Likes": 44,
               "Hours": "12PM - 6PM",
               "Location": "Seattle",
-              "Review1": "Amazing potato farm with an amazing customer service team. They really cared about our wellbeing and they have quality products. My favorite is their homemade mashed Potatoes",
-              "Reviewer1": "4/20/2020 - Mr. Rogers",
-              "Review2":  "I love their farm fresh potatoes and yummy snacks. Its a must visit place!",
-              "Reviewer2": "3/25/2020 - Mr. Pots"
+              "Reviews" : [
+                  {
+                    "ReviewText" :  "Amazing potato farm with an amazing customer service team. They really cared about our wellbeing and they have quality products. My favorite is their homemade mashed Potatoes",
+                    "Reviewer": "4/20/2020 - Mr. Rogers"
+                  },
+                  {
+                    "ReviewText":  "I love their farm fresh potatoes and yummy snacks. Its a must visit place!",
+                    "Reviewer": "3/25/2020 - Mr. Pots"
+                  }     
+              ]
           }
       ],
       "Crafts": [
           {
               "Name": "Acorn Street Shop",
               "Description": "We are a long-running needlework shop offering a wide selection of yarns along with tools, books & classes.",
-              "Stars": "4.8/5",
+              "Likes": 35,
               "Hours": "11AM-5PM",
               "Location": "Seattle",
-              "Review1": "We love Acorn Street! They've been so helpful and accommodating during the shutdown. We need our yarn so much now that we are stuck inside! Thank you for the shopping options of video call and curbside pick up!",
-              "Reviewer1": "5/27/2020 - Ms. Candace",
-              "Review2":  "Such a cute shop. Yarn bombed tree outside was fun! The associates were sweet; they complemented my shawl and took my recommendation on the pattern, even added it to their store tablet! Did I mention that they've got a store tablet with a Ravelry account? Such a smart idea!",
-              "Reviewer2": "4/25/2020 - Mr. T"
+              "Reviews" : [
+                  {
+                    "ReviewText" :  "We love Acorn Street! They've been so helpful and accommodating during the shutdown. We need our yarn so much now that we are stuck inside! Thank you for the shopping options of video call and curbside pick up!",
+                    "Reviewer": "5/27/2020 - Ms. Candace"
+                  },
+                  {
+                    "ReviewText":  "Such a cute shop. Yarn bombed tree outside was fun! The associates were sweet; they complemented my shawl and took my recommendation on the pattern, even added it to their store tablet! Did I mention that they've got a store tablet with a Ravelry account? Such a smart idea!",
+                    "Reviewer": "4/25/2020 - Mr. T"
+                  }     
+              ]
           },
           {
               "Name": "FrogLegs Cooking School",
               "Description": "We are a culinary academy for kids and adults that specialize in edible entertainment. In addition to kid and adult cooking classes, summer camps, after school programming and semester classes, we offer party supplies and scratch-baked small-batch cookies, granola, dog treats and edible cookie dough in the adjoining Mrs. We believe in the power food plays in bringing people together and look forward to seeing you around the table.",
-              "Stars": "4/5",
+              "Likes": 123,
               "Hours": "10AM-5PM",
               "Location": "Seattle",
-              "Review1": "This place is so cute! They have cooking classes for kids and adults. We stopped in on a Thursday night and they had a drop in special where you could decorate cookies, cupcakes or a cake. The whole staff was fantastic with our six year old, really kind and helpful. They have lots of party goods and also fun little gifts. We will for sure be back to sign him up for a class or camp!",
-              "Reviewer1": "4/20/2019 - Ms. Lauren",
-              "Review2":  "Amazingly friendly staff. Cooking birthday party! Are you kidding! This is like the best place ever. Got some delicious cookie dough.",
-              "Reviewer2": "3/22/2019 - Mr. Oscar"
+              "Reviews" : [
+                  {
+                    "ReviewText" :  "This place is so cute! They have cooking classes for kids and adults. We stopped in on a Thursday night and they had a drop in special where you could decorate cookies, cupcakes or a cake. The whole staff was fantastic with our six year old, really kind and helpful. They have lots of party goods and also fun little gifts. We will for sure be back to sign him up for a class or camp!",
+                    "Reviewer": "4/20/2019 - Ms. Lauren"
+                  },
+                  {
+                    "ReviewText":  "Amazingly friendly staff. Cooking birthday party! Are you kidding! This is like the best place ever. Got some delicious cookie dough.",
+                    "Reviewer": "3/22/2019 - Mr. Oscar"
+                  }     
+              ]
           },
           {
               "Name": "Artist & Craftsman",
               "Description": "We are a creative supplies store for artists & crafters, from painting & sculpting to bookbinding & origami.",
-              "Stars": "4.9/5",
+              "Likes": 222,
               "Hours": "12PM - 6PM",
               "Location": "Seattle",
-              "Review1": "Nice store. Good prices. Great service. The staff are very friendly, enthusiastic and helpful. A lot of art supplies as well as craft materials are available. Everything could be found in this store with competitive price. There are also many discounts offered around the store.",
-              "Reviewer1": "1/20/2020 - Mr. Kent",
-              "Review2":  "This store has a huge selection! Not only that, but the place is spacious and fun to explore. The staff has been consistently friendly, polite, and helpful.",
-              "Reviewer2": "3/12/2020 - Mr. Riley"
+              "Reviews" : [
+                  {
+                    "ReviewText" :  "Nice store. Good prices. Great service. The staff are very friendly, enthusiastic and helpful. A lot of art supplies as well as craft materials are available. Everything could be found in this store with competitive price. There are also many discounts offered around the store.",
+                    "Reviewer": "1/20/2020 - Mr. Kent"
+                  },
+                  {
+                    "ReviewText":  "This store has a huge selection! Not only that, but the place is spacious and fun to explore. The staff has been consistently friendly, polite, and helpful.",
+                    "Reviewer": "3/12/2020 - Mr. Riley"
+                  }     
+              ]
           }
       ]
     },
@@ -111,105 +165,159 @@
             {
                 "Name": "Dirty Oscar's Annex",
                 "Description": "We are a relaxed bar offering creative cocktails & New American fare such as chicken & waffles, plus sliders.",
-                "Stars": "4.5/5",
+                "Likes": 25,
                 "Hours": "8AM-5PM",
                 "Location": "Tacoma",
-                "Review1": "On a recommendation from a friend, we tried this place for a Valentine's weekend brunch. It exceeded expectations, by far. Stellar service, very friendly and knowledgeable. The food is fantastic. Some of the best sausage gravy around, great variety of interesting dishes and drinks to be had. Highly recommended, been there twice in 2 weeks and it's over 60miles from us.",
-                "Reviewer1": "2/20/2020 - Mr. Rolf",
-                "Review2":  "Absolutely love the food and drinks here. It's almost always busy, so plan on a wait if you come at peak times. They're good about getting tables cleared quickly though. It's also pretty noisy when the place is full, so great if you like a socially energetic atmosphere, but not the place for quiet intimate conversation. The plates are beautiful and delicious! Reasonably priced too.",
-                "Reviewer2": "3/27/2020 - Ms. Jenny"
+                "Reviews" : [
+                    {
+                      "ReviewText" :  "On a recommendation from a friend, we tried this place for a Valentine's weekend brunch. It exceeded expectations, by far. Stellar service, very friendly and knowledgeable. The food is fantastic. Some of the best sausage gravy around, great variety of interesting dishes and drinks to be had. Highly recommended, been there twice in 2 weeks and it's over 60miles from us.",
+                      "Reviewer": "2/20/2020 - Mr. Rolf"
+                    },
+                    {
+                      "ReviewText":  "Absolutely love the food and drinks here. It's almost always busy, so plan on a wait if you come at peak times. They're good about getting tables cleared quickly though. It's also pretty noisy when the place is full, so great if you like a socially energetic atmosphere, but not the place for quiet intimate conversation. The plates are beautiful and delicious! Reasonably priced too.",
+                      "Reviewer": "3/27/2020 - Ms. Jenny"
+                    }     
+                ]                
             },
             {
                 "Name": "Pho Tai Restaurant",
                 "Description": "We're a veteran Vietnamese noodle house serving soups, beer & wine in a strip-mall setting open late.",
-                "Stars": "3.5/5",
+                "Likes": 69,
                 "Hours": "9AM-4PM",
                 "Location": "Tacoma",
-                "Review1": "Huge portions!! Came in Saturday at 1:30 and sat down it’s a seat yourself joint. They never came with menus so had to ask cashier if we ordered with him. I think they were still wrapping up with lunch rush. Food came out quickly and tasted great. Would definitely try again when in area.",
-                "Reviewer1": "9/20/2019 - Ms. Jackie",
-                "Review2":  "Great casual place to have dinner with a group or dine alone. Food is great as well as portion. You definitely get more than what you pay for! Pho soup was delicious as well as spicy chicken with stir fried rice. Will definitely be back!",
-                "Reviewer2": "3/25/2019 - Mr. Brole"
+                "Reviews" : [
+                    {
+                      "ReviewText" :  "Huge portions!! Came in Saturday at 1:30 and sat down it’s a seat yourself joint. They never came with menus so had to ask cashier if we ordered with him. I think they were still wrapping up with lunch rush. Food came out quickly and tasted great. Would definitely try again when in area.",
+                      "Reviewer": "9/20/2019 - Ms. Jackie"
+                    },
+                    {
+                      "ReviewText":  "Great casual place to have dinner with a group or dine alone. Food is great as well as portion. You definitely get more than what you pay for! Pho soup was delicious as well as spicy chicken with stir fried rice. Will definitely be back!",
+                      "Reviewer": "3/25/2019 - Mr. Brole"
+                    }     
+                ]   
             },
             {
                 "Name": "Infinite Soups",
                 "Description": "We're an ever-changing menu of soups includes recipes with meat, vegetarian & vegan ingredients.",
-                "Stars": "4.8/5",
+                "Likes": 115,
                 "Hours": "11AM - 7PM",
                 "Location": "Tacoma",
-                "Review1": "Never knew so many different soups existed. All extremely delicious. Great prices. Friendly staff. Love this place!!!",
-                "Reviewer1": "4/20/2020 - Mr. Deanna",
-                "Review2":  "I'm obsessed with this place!! Bariatric patient friendly!!   Every dish is delicious made from scratch taste!   Service is awesome, will customize your soup incase you dont want too much tortellini or noodles.   Very cool atmosphere",
-                "Reviewer2": "3/25/2020 - Ms. Amy"
+                "Reviews" : [
+                    {
+                      "ReviewText" :  "Never knew so many different soups existed. All extremely delicious. Great prices. Friendly staff. Love this place!!!",
+                      "Reviewer": "9/20/2019 - Ms. Jana"
+                    },
+                    {
+                      "ReviewText":  "I'm obsessed with this place!! Bariatric patient friendly!!   Every dish is delicious made from scratch taste!   Service is awesome, will customize your soup incase you dont want too much tortellini or noodles.   Very cool atmosphere",
+                      "Reviewer": "3/25/2019 - Mr. Tala"
+                    }     
+                ] 
             }
         ],
         "Produce": [
             {
                 "Name": "Tacoma Boys",
                 "Description": "We're a 24/7 outpost of a local chain of markets selling meats, produce & specialty foods, plus beer & wine.",
-                "Stars": "4.7/5",
+                "Likes": 56,
                 "Hours": "All day",
                 "Location": "Tacoma",
-                "Review1": "Great food, not so great prices... but excellent selection of beer for good prices! Definitely my go to for unique small batches I've never heard of before.",
-                "Reviewer1": "4/20/2020 - Mr. Dominic",
-                "Review2":  "This is one of my absolute favorite local grocery stores for numerous reasons. My top being that the quality of the fruit and vegetables is one of the best for competitive prices. This store is open 24/7 and as somebody who has worked night shift I can't even begin to express how much I appreciate those hours making it possible for me to keep myself well fed.",
-                "Reviewer2": "3/25/2020 - Ms. Tasha"
+                "Reviews" : [
+                    {
+                      "ReviewText" :  "Great food, not so great prices... but excellent selection of beer for good prices! Definitely my go to for unique small batches I've never heard of before.",
+                      "Reviewer": "4/20/2020 - Mr. Dominic"
+                    },
+                    {
+                      "ReviewText":  "This is one of my absolute favorite local grocery stores for numerous reasons. My top being that the quality of the fruit and vegetables is one of the best for competitive prices. This store is open 24/7 and as somebody who has worked night shift I can't even begin to express how much I appreciate those hours making it possible for me to keep myself well fed.",
+                      "Reviewer": "3/25/2020 - Ms. Tasha"
+                    }     
+                ] 
             },
             {
                 "Name": "The Broadway Farmers Market",
                 "Description": "We're a place where a collection of local growers, specialty food producers & artisans gather for a Thursday marketplace.",
-                "Stars": "4/5",
+                "Likes": 50,
                 "Hours": "10AM-2PM",
                 "Location": "Tacoma",
-                "Review1": "Wonderful work Broadway Staff and vendors at the Tacoma Broadway Market!  COVID-19 measures were taken seriously and still with protocol, much joy was found. Truly they have their vendor's and customer's health at first priority.",
-                "Reviewer1": "5/20/2020 - Ms. Evan",
-                "Review2":  "It's Cute there are some good deals here and there. Local artists jamming and lots of great food smells. Parking was easy enough of course pay to park downtown. I suggest making a mini day trip and taking the bus.",
-                "Reviewer2": "3/25/2020 - Mr. Jessie"
+                "Reviews" : [
+                    {
+                      "ReviewText" :  "Wonderful work Broadway Staff and vendors at the Tacoma Broadway Market!  COVID-19 measures were taken seriously and still with protocol, much joy was found. Truly they have their vendor's and customer's health at first priority.",
+                      "Reviewer": "5/20/2020 - Ms. Evan"
+                    },
+                    {
+                      "ReviewText":  "It's Cute there are some good deals here and there. Local artists jamming and lots of great food smells. Parking was easy enough of course pay to park downtown. I suggest making a mini day trip and taking the bus.",
+                      "Reviewer": "3/25/2020 - Mr. Jessie"
+                    }     
+                ] 
             },
             {
                 "Name": "Lucky Supermarket",
                 "Description": "We are an Asian marketplace sourcing local goods as well as imported goods from asian countries.",
-                "Stars": "4/5",
+                "Likes": 50,
                 "Hours": "9AM - 8PM",
                 "Location": "Tacoma",
-                "Review1": "I love this place! Very nice n clean.  The meat is fresh n clean. Exotic meats n seafoods here that are not found in other stores and are hard to get.  Cashiers are very courteous once you get to know them.  Handicap parking in front of store. Miscellaneous household items can also be found here",
-                "Reviewer1": "4/20/2020 - Mr. Trace",
-                "Review2":  "They have the best selection and prices for vegetarian mock meats I've ever seen and the best prices. I paid 6.00 for and item I usually pay 13.00 for in Renton.",
-                "Reviewer2": "3/25/2020 - Ms. Brandia"
+                "Reviews" : [
+                    {
+                      "ReviewText" :  "I love this place! Very nice n clean.  The meat is fresh n clean. Exotic meats n seafoods here that are not found in other stores and are hard to get.  Cashiers are very courteous once you get to know them.  Handicap parking in front of store. Miscellaneous household items can also be found here",
+                      "Reviewer": "4/20/2020 - Mr. Trace"
+                    },
+                    {
+                      "ReviewText":  "They have the best selection and prices for vegetarian mock meats I've ever seen and the best prices. I paid 6.00 for and item I usually pay 13.00 for in Renton.",
+                      "Reviewer": "3/25/2020 - Ms. Brandia"
+                    }     
+                ] 
             }
         ],
         "Crafts": [
             {
                 "Name": "Art Nation",
                 "Description": "We're a group of art advocates located in the Tacoma suburbs offering a whole range of everything art!",
-                "Stars": "5/5",
+                "Likes": 5,
                 "Hours": "10AM-5PM",
                 "Location": "Tacoma",
-                "Review1": "Amazing art warehouse filled with practically anything an artist would like to use. Fair prices and great deals.",
-                "Reviewer1": "4/20/2020 - Mr. Rogers",
-                "Review2":  "I love their assortment of supplies. Paint perfect to customize my amiibos with!!",
-                "Reviewer2": "3/25/2020 - Mr. Pots"
+                "Reviews" : [
+                    {
+                      "ReviewText" :  "Amazing art warehouse filled with practically anything an artist would like to use. Fair prices and great deals.",
+                      "Reviewer1": "4/20/2020 - Mr. Rogers"
+                    },
+                    {
+                      "ReviewText":  "I love their assortment of supplies. Paint perfect to customize my amiibos with!!",
+                      "Reviewer": "3/25/2020 - Mr. Pots"
+                    }     
+                ] 
             },
             {
                 "Name": "Crafts Town",
                 "Description": "We're a crafts store filled with everything paper involved. From origami to paper-mache, we are the one stop shop for all thing crafts.",
-                "Stars": "4/5",
+                "Likes": 20,
                 "Hours": "10AM-5PM",
                 "Location": "Tacoma",
-                "Review1": "Awesome crafts store where I purchased an assortment of origami paper for my dragon project. Super friendly staff that helped me fine the origami paper.",
-                "Reviewer1": "4/20/2020 - Mr. Bash",
-                "Review2":  "Their store looked super clean and well put together inside. Awesome staff that helped me in what I was looking for.",
-                "Reviewer2": "3/25/2020 - Ms. Roxy"
+                "Reviews" : [
+                    {
+                      "ReviewText" :  "Awesome crafts store where I purchased an assortment of origami paper for my dragon project. Super friendly staff that helped me fine the origami paper.",
+                      "Reviewer1": "4/20/2020 - Mr. Bash"
+                    },
+                    {
+                      "ReviewText":  "Their store looked super clean and well put together inside. Awesome staff that helped me in what I was looking for.",
+                      "Reviewer": "3/25/2020 - Ms. Roxy"
+                    }     
+                ] 
             },
             {
                 "Name": "Furniture Observatory",
                 "Description": "Delivering the best pieces of furniture available in the Pacific Northwest since 1919",
-                "Stars": "4/5",
+                "Likes": 56,
                 "Hours": "10PM - 6PM",
                 "Location": "Tacoma",
-                "Review1": "This is the place to get your furniture. All sorts of brands to try and test out before making your decision",
-                "Reviewer1": "4/25/2020 - Mr. Blake",
-                "Review2":  "I loved their selection of furniture. Loved their modern pieces as well. Took home an amazing coffee table.",
-                "Reviewer2": "3/25/2020 - Mr. Table"
+                "Reviews" : [
+                    {
+                      "ReviewText" :  "This is the place to get your furniture. All sorts of brands to try and test out before making your decision",
+                      "Reviewer1": "4/25/2020 - Mr. Blake"
+                    },
+                    {
+                      "ReviewText":  "I loved their selection of furniture. Loved their modern pieces as well. Took home an amazing coffee table.",
+                      "Reviewer": "3/25/2020 - Mr. Table"
+                    }     
+                ] 
             }
         ]
     }

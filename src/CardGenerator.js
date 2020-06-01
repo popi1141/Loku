@@ -6,6 +6,7 @@ import * as firebase from 'firebase/app';
 import 'firebase/database';
 import "firebase/auth";
 
+//Generates the card section
 export class CardGenerator extends Component {
   constructor(props){
     super(props);
@@ -42,7 +43,7 @@ export class CardGenerator extends Component {
       let city = this.props.city;
       let category = this.props.category;
       let categoryData = this.state.categoryData;
-      if(!categoryData) return <h1>No category specified</h1>
+      if(!categoryData) return <h1>Loading...</h1>
       let cards = categoryData.map((store) => {
         return <LokuCard storeData={store} city={city} category={category} key={store.Name}/>;
       });
@@ -54,7 +55,8 @@ export class CardGenerator extends Component {
       );
     }
   }
-  
+
+//Creates a sole restaurant card
 export class LokuCard extends Component {
     constructor(props){
         super(props);
@@ -72,11 +74,9 @@ export class LokuCard extends Component {
         let city = this.props.city;
         let category = this.props.category;
         let imgURL = "/img/" + storeData.Name + ".jpg";
-
         if(this.state.shouldRedirect) {
         return <Redirect push to={"/lokupage/" + city + "/" + category + "/" + storeData.Name} />
         } 
-
         return (
         <Card className="mb-3" onClick={this.handleClick}>
             <Row noGutters={true}>

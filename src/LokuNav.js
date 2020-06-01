@@ -3,6 +3,7 @@ import { Navbar, Nav, NavDropdown} from 'react-bootstrap';
 import {Link} from 'react-router-dom'; //use switch around routes so you don't need if/else statements
 import './App.css';
 
+//Notes: in React-Bootstrap you have to turn the NavItems into "As Links" to use "to" to route.
 export class LokuNav extends Component {
   render() {
     return (
