@@ -2,13 +2,48 @@ import React, { Component }  from 'react';
 import './App.css';
 import {Card, Row, Col, Container, Alert} from 'react-bootstrap';
 import { Redirect} from 'react-router-dom'; //use switch around routes so you don't need if/else statements
-
+import * as firebase from 'firebase/app';
+import 'firebase/database';
+import "firebase/auth";
 
 export class CardGenerator extends Component {
-    render() {
+  constructor(props){
+    super(props);
+    this.state = {
+      firebaseRef: firebase.database().ref()
+    };
+  }
+  
+  //For Initial Call
+  componentDidMount() {
+    let city = this.props.city; 
+    let category = this.props.category; 
+    this.state.firebaseRef.on('value', (snapshot) => {
+      let database = snapshot.val();
+      let storeObj = database[city][category];
+      this.setState({categoryData: storeObj});
+    });
+  }
+
+  //For Future Calls
+  componentDidUpdate(prevProps) {
+    if (this.props.city != prevProps.city || this.props.category != prevProps.category) {
+      let city = this.props.city; 
+      let category = this.props.category; 
+      this.state.firebaseRef.on('value', (snapshot) => {
+        let database = snapshot.val();
+        let storeObj = database[city][category];
+        this.setState({categoryData: storeObj});
+      });
+    }
+  }
+
+  render() {
       let city = this.props.city;
       let category = this.props.category;
-      let cards = this.props.data.map((store) => {
+      let categoryData = this.state.categoryData;
+      if(!categoryData) return <h1>No category specified</h1>
+      let cards = categoryData.map((store) => {
         return <LokuCard storeData={store} city={city} category={category} key={store.Name}/>;
       });
       return (

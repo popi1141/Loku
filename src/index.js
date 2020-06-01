@@ -4,7 +4,6 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import Data from './Data.json';
 import { BrowserRouter } from 'react-router-dom';
 import * as firebase from 'firebase/app';
 import 'firebase/database';
@@ -26,7 +25,7 @@ firebase.initializeApp(firebaseConfig);
 
 ReactDOM.render(
   <BrowserRouter>
-    <App Data={Data}/>
+    <App/>
   </BrowserRouter>,
   document.getElementById('root')
 );
