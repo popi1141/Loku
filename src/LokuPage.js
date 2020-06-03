@@ -33,7 +33,7 @@ export class LokuPage extends Component {
     let imgPath = "/img/" + data.Name + ".jpg";
     //Creates a set of ReviewCard elements
     let cards = data.Reviews.map((reviewData) => {
-      return <ReviewCard reviewData={reviewData}/>;
+      return <ReviewCard reviewData={reviewData} key={reviewData.Reviewer}/>;
     });
     return (
       <Container fluid className="restosection">
