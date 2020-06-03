@@ -2,7 +2,6 @@ import React from "react";
 import * as firebase from 'firebase/app';
 import 'firebase/database';
 import "firebase/auth";
-import {Button} from 'react-bootstrap';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -25,6 +24,7 @@ export default class LikeButton extends React.Component {
             query.once("child_added", function(snapshot) {
             snapshot.ref.update({ Likes: newCount})
         });
+        this.refs.btn.setAttribute("disabled", "disabled");
     };
     
     componentDidMount() {
@@ -34,7 +34,7 @@ export default class LikeButton extends React.Component {
     render() {
         return (
             <div>
-                <button type="button" class="btn btn-success" onClick={this.addLike}>
+                <button type="button" ref="btn" class="btn btn-success" onClick={this.addLike}>
                 <FontAwesomeIcon icon={faHeart} /> Likes: {this.state.likes}
                 </button>
             </div>
