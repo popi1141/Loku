@@ -28,7 +28,7 @@ export class CardGenerator extends Component {
 
   //For Future Calls
   componentDidUpdate(prevProps) {
-    if (this.props.city != prevProps.city || this.props.category != prevProps.category) {
+    if (this.props.city !== prevProps.city || this.props.category !== prevProps.category) {
       let city = this.props.city; 
       let category = this.props.category; 
       this.state.firebaseRef.on('value', (snapshot) => {
@@ -75,7 +75,7 @@ export class LokuCard extends Component {
         let category = this.props.category;
         let imgURL = "/img/" + storeData.Name + ".jpg";
         if(this.state.shouldRedirect) {
-        return <Redirect push to={"/lokupage/" + city + "/" + category + "/" + storeData.Name} />
+          return <Redirect push to={"/lokupage/" + city + "/" + category + "/" + storeData.Name} />
         } 
         return (
         <Card className="mb-3" onClick={this.handleClick}>

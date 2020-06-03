@@ -5,6 +5,7 @@ import _ from 'lodash';
 import * as firebase from 'firebase/app';
 import 'firebase/database';
 import "firebase/auth";
+import LikeButton from './likeButton';
 
 //Creates the restaurant page
 export class LokuPage extends Component {
@@ -48,6 +49,7 @@ export class LokuPage extends Component {
               <li> Location: {data.Location} </li> 
               <li> Hours: {data.Hours} </li> 
               <li> Description: {data.Description} </li> 
+              <LikeButton path={this.props.history.location.pathname} name={data.Name} currLikes={data.Likes}></LikeButton>
               <li> Likes: {data.Likes} </li> 
             </ul>
           </Col>
