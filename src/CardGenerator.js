@@ -1,6 +1,6 @@
 import React, { Component }  from 'react';
 import './App.css';
-import {Card, Row, Col, Container, Alert} from 'react-bootstrap';
+import {Card, Row, Col, Container, Alert, Spinner} from 'react-bootstrap';
 import { Redirect} from 'react-router-dom'; //use switch around routes so you don't need if/else statements
 import * as firebase from 'firebase/app';
 import 'firebase/database';
@@ -28,7 +28,7 @@ export class CardGenerator extends Component {
 
   //For Future Calls
   componentDidUpdate(prevProps) {
-    if (this.props.city != prevProps.city || this.props.category != prevProps.category) {
+    if (this.props.city !== prevProps.city || this.props.category !== prevProps.category) {
       let city = this.props.city; 
       let category = this.props.category; 
       this.state.firebaseRef.on('value', (snapshot) => {
@@ -43,7 +43,7 @@ export class CardGenerator extends Component {
       let city = this.props.city;
       let category = this.props.category;
       let categoryData = this.state.categoryData;
-      if(!categoryData) return <h1>Loading...</h1>
+      if(!categoryData) return <Spinner animation="grow" variant="success" className="bigSpinner"/>     
       let cards = categoryData.map((store) => {
         return <LokuCard storeData={store} city={city} category={category} key={store.Name}/>;
       });

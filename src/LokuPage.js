@@ -1,5 +1,5 @@
 import React, {Component }  from 'react';
-import {Card, Row, Col, Container} from 'react-bootstrap';
+import {Card, Row, Col, Container, Spinner} from 'react-bootstrap';
 import './App.css';
 import _ from 'lodash';
 import * as firebase from 'firebase/app';
@@ -29,7 +29,7 @@ export class LokuPage extends Component {
   render() {
     let data = this.state.storeData;
     //While data is loading
-    if(!data) return <h1>Loading...</h1>
+    if(!data) return <Spinner animation="grow" />                                                                              
     let imgPath = "/img/" + data.Name + ".jpg";
     //Creates a set of ReviewCard elements
     let cards = data.Reviews.map((reviewData) => {
