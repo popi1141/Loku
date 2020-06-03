@@ -29,7 +29,7 @@ export class LokuPage extends Component {
   render() {
     let data = this.state.storeData;
     //While data is loading
-    if(!data) return <Spinner animation="grow" />                                                                              
+    if(!data) return <Spinner animation="grow" variant="success" className="bigSpinner"/>                                                                                 
     let imgPath = "/img/" + data.Name + ".jpg";
     //Creates a set of ReviewCard elements
     let cards = data.Reviews.map((reviewData) => {
