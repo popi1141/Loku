@@ -8,7 +8,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export default class LikeButton extends React.Component {
     constructor(props){
         super(props);
-        console.log(props);
         this.state = {likes: this.props.currLikes};
     }
 
@@ -20,7 +19,6 @@ export default class LikeButton extends React.Component {
                 });
             let pathValues = this.props.path.split('/');
             let queryPath = pathValues[2] + '/' + pathValues[3];
-            console.log(newCount);
             var query = firebase.database().ref(queryPath).orderByChild("Name").equalTo(pathValues[4]);
                 query.once("child_added", function(snapshot) {
                 snapshot.ref.update({ Likes: newCount})
