@@ -13,18 +13,20 @@ export default class LikeButton extends React.Component {
     }
 
     addLike = () => {
-        let newCount = this.state.likes + 1;
-            this.setState({
-                likes: newCount
+        if(!this.props.disabled) {
+            let newCount = this.state.likes + 1;
+                this.setState({
+                    likes: newCount
+                });
+            let pathValues = this.props.path.split('/');
+            let queryPath = pathValues[2] + '/' + pathValues[3];
+            console.log(newCount);
+            var query = firebase.database().ref(queryPath).orderByChild("Name").equalTo(pathValues[4]);
+                query.once("child_added", function(snapshot) {
+                snapshot.ref.update({ Likes: newCount})
             });
-        let pathValues = this.props.path.split('/');
-        let queryPath = pathValues[2] + '/' + pathValues[3];
-        console.log(newCount);
-        var query = firebase.database().ref(queryPath).orderByChild("Name").equalTo(pathValues[4]);
-            query.once("child_added", function(snapshot) {
-            snapshot.ref.update({ Likes: newCount})
-        });
-        this.refs.btn.setAttribute("disabled", "disabled");
+            this.refs.btn.setAttribute("disabled", "disabled");
+        }
     };
     
     componentDidMount() {
@@ -33,11 +35,9 @@ export default class LikeButton extends React.Component {
     
     render() {
         return (
-            <div>
-                <button type="button" ref="btn" class="btn btn-success" onClick={this.addLike}>
+                <button type="button" ref="btn" className="btn btn-success" onClick={this.addLike}>
                 <FontAwesomeIcon icon={faHeart} /> Likes: {this.state.likes}
                 </button>
-            </div>
         )
     }
 }

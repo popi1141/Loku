@@ -49,7 +49,7 @@ export class LokuPage extends Component {
               <li> Location: {data.Location} </li> 
               <li> Hours: {data.Hours} </li> 
               <li> Description: {data.Description} </li> 
-              <LikeButton path={this.props.history.location.pathname} name={data.Name} currLikes={data.Likes}></LikeButton>
+              <LikeButton path={this.props.history.location.pathname} name={data.Name} currLikes={data.Likes} disabled={false}></LikeButton>
             </ul>
           </Col>
         </Row>

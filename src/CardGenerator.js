@@ -5,6 +5,7 @@ import { Redirect} from 'react-router-dom'; //use switch around routes so you do
 import * as firebase from 'firebase/app';
 import 'firebase/database';
 import "firebase/auth";
+import LikeButton from './likeButton';
 
 //Generates the card section
 export class CardGenerator extends Component {
@@ -74,8 +75,10 @@ export class LokuCard extends Component {
         let city = this.props.city;
         let category = this.props.category;
         let imgURL = "/img/" + storeData.Name + ".jpg";
+        console.log(this.props);
+        let url = "/lokupage/" + city + "/" + category + "/" + storeData.Name;
         if(this.state.shouldRedirect) {
-          return <Redirect push to={"/lokupage/" + city + "/" + category + "/" + storeData.Name} />
+          return <Redirect push to={url} />
         } 
         return (
         <Card className="mb-3" onClick={this.handleClick}>
@@ -90,6 +93,8 @@ export class LokuCard extends Component {
                 </Card.Title>
                 <Card.Text>
                     {storeData.Description}
+                    <br></br>
+                    <LikeButton path={url} name={this.props.storeData.Name} currLikes={this.props.storeData.Likes} disabled={true}></LikeButton>
                 </Card.Text>
                 </Card.Body>
             </Col>
