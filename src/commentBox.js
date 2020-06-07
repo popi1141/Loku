@@ -3,8 +3,6 @@ import * as firebase from 'firebase/app';
 import 'firebase/database';
 import "firebase/auth";
 import {Row, Col, Form} from 'react-bootstrap';
-import { faThumbsDown, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default class CommentBox extends Component {
     constructor(props){
