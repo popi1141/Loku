@@ -5,7 +5,7 @@ import _ from 'lodash';
 import * as firebase from 'firebase/app';
 import 'firebase/database';
 import "firebase/auth";
-import Dislike from './dislikeButton';
+import Dislike from './LikeDislikeButtons';
 
 //Creates the restaurant page
 export class LokuPage extends Component {

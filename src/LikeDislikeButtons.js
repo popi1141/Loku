@@ -1,11 +1,12 @@
-import React from "react";
+import React, {Component} from "react";
 import * as firebase from 'firebase/app';
 import 'firebase/database';
 import "firebase/auth";
-import { faHeart, faThumbsDown, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
+import {Button} from 'react-bootstrap';
+import { faThumbsDown, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export default class Dislike extends React.Component {
+export default class LikeDislike extends Component {
     constructor(props){
         super(props);
         this.state = {likes: this.props.currLikes};
@@ -49,10 +50,10 @@ export default class Dislike extends React.Component {
         return (
             <div>
                 <p>Likes: {this.state.likes}</p>
-                <button type="button" ref="btnY" className="btn btn-success" onClick={this.addLike}>
-                <FontAwesomeIcon icon={faThumbsUp} /></button>
-                <button type="button" ref="btnN" className="btn btn-success" onClick={this.addDislike}>
-                <FontAwesomeIcon icon={faThumbsDown} /> </button>
+                <Button ref="btnY" variant="success" className="spacer" onClick={this.addLike}>
+                <FontAwesomeIcon icon={faThumbsUp} /></Button>
+                <Button ref="btnN" variant="success" onClick={this.addDislike}>
+                <FontAwesomeIcon icon={faThumbsDown} /> </Button>
             </div>
                 
         )

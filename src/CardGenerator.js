@@ -5,7 +5,7 @@ import { Redirect} from 'react-router-dom'; //use switch around routes so you do
 import * as firebase from 'firebase/app';
 import 'firebase/database';
 import "firebase/auth";
-import LikeButton from './likeButton';
+import LikeIndicator from './LikeIndicator';
 
 //Generates the card section
 export class CardGenerator extends Component {
@@ -94,7 +94,7 @@ export class LokuCard extends Component {
                 <Card.Text>
                     {storeData.Description}
                     <br></br>
-                    <LikeButton path={url} name={this.props.storeData.Name} currLikes={this.props.storeData.Likes} disabled={true}></LikeButton>
+                    <LikeIndicator path={url} name={this.props.storeData.Name} currLikes={this.props.storeData.Likes} disabled={true}></LikeIndicator>
                 </Card.Text>
                 </Card.Body>
             </Col>

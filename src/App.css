@@ -64,6 +64,9 @@ footer {
   text-shadow: 4px 5px green;
 }
 
+.spacer {
+  margin-right: 1%; 
+}
 .display-1 {
   font-weight:900; 
 }
