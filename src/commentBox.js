@@ -56,7 +56,7 @@ export default class CommentBox extends Component {
                         <Form.Control id="inputName" type="text" ref="nameInput" placeholder="Insert name" value={this.state.name}  onChange={this.handleNameChange}/>
                         <br />
                         <label for="inputComment">Comment</label>
-                        <Form.Control for="inputComment" type="text" as="textarea" ref="commentInput" placeholder="Insert comment here" value={this.state.comment} onChange={this.handleCommentChange} />
+                        <Form.Control id="inputComment" type="text" as="textarea" ref="commentInput" placeholder="Insert comment here" value={this.state.comment} onChange={this.handleCommentChange} />
                     </Form.Group>
                     <Button type="submit" value="Submit" variant="success" ref="submitButton"> Submit </Button>
                 </Form>
