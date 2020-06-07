@@ -34,7 +34,7 @@ export class LokuPage extends Component {
   cardComments(data) {
     let dataset = data.data.Reviews;
     let reviewsss = Object.keys(dataset);
-    
+
     // creating list of comments
     let commentSet = reviewsss.map((key) => {
       let object = dataset[key];
@@ -50,9 +50,6 @@ export class LokuPage extends Component {
     //While data is loading
     if(!data) return <Spinner animation="grow" variant="success" className="bigSpinner"/>                                                                                 
     let imgPath = "/img/" + data.Name + ".jpg";
-
-    console.log(data.Reviews);
-    //Creates a set of ReviewCard elements
 
     return (
       <Container fluid className="restosection">
