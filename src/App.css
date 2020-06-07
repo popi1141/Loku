@@ -13,7 +13,7 @@ body {
   color: white;
 }
 
-.card {
+.restocard, .restosection {
   opacity: 0;
   animation-name: fadeIn;
   animation-duration: 1s;
@@ -123,6 +123,7 @@ footer {
   .card-img {
     height: 45vw;
   }
+
   .restosection {
     width: 85%;
     margin-left: 7.5%;
@@ -130,6 +131,7 @@ footer {
     margin-bottom: 3%;
     margin-top: 3%;
   } 
+
   .frontjumbo {
     height: 700px; 
     background-image:url('/img/splashcover.png');
