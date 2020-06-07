@@ -66,6 +66,7 @@ footer {
 
 .spacer {
   margin-right: 1%; 
+  margin-top: 1%;
 }
 .display-1 {
   font-weight:900; 
@@ -82,16 +83,25 @@ footer {
 
 /* Animation set */
 .restocard:nth-child(2) {
-  animation-delay: 0.25s;
+  animation-delay: 0.15s;
 }
 
 .restocard:nth-child(3) {
-  animation-delay: 0.5s;
+  animation-delay: 0.3s;
 }
 
 .restocard:nth-child(4) {
+  animation-delay: 0.45s;
+}
+
+.restocard:nth-child(5) {
+  animation-delay: 0.6s;
+}
+
+.restocard:nth-child(6) {
   animation-delay: 0.75s;
 }
+
 
 @keyframes fadeIn {
   from { opacity: 0; }

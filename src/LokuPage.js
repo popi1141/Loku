@@ -5,7 +5,7 @@ import _ from 'lodash';
 import * as firebase from 'firebase/app';
 import 'firebase/database';
 import "firebase/auth";
-import Dislike from './LikeDislikeButtons';
+import LikeDislike from './LikeDislikeButtons';
 import CommentBox from './commentBox';
 
 //Creates the restaurant page
@@ -60,7 +60,7 @@ export class LokuPage extends Component {
               <li> Location: {data.Location} </li> 
               <li> Hours: {data.Hours} </li> 
               <li> Description: {data.Description} </li> 
-              <li><Dislike path={this.props.history.location.pathname} name={data.Name} currLikes={data.Likes} disabled={false}></Dislike></li>
+              <LikeDislike path={this.props.history.location.pathname} name={data.Name} currLikes={data.Likes} disabled={false}></LikeDislike>
             </ul>
           </Col>
         </Row>

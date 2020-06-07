@@ -58,11 +58,10 @@ export default class LikeDislike extends Component {
     render() {
         return (
             <div>
-                <p>Likes: {this.state.likes}</p>
                 <Button type="button" ref="btnY" variant="success" className="spacer" onClick={this.addLike}>
-                <FontAwesomeIcon icon={faThumbsUp} /> Like </Button>
-                <Button ref="btnN" variant="success" onClick={this.addDislike}>
-                <FontAwesomeIcon icon={faThumbsDown} /> Dislike </Button>
+                <FontAwesomeIcon icon={faThumbsUp} /> {this.state.likes} </Button>
+                <Button ref="btnN" variant="outline-success" className="spacer" onClick={this.addDislike}>
+                <FontAwesomeIcon icon={faThumbsDown} /> </Button>
             </div>
                 
         )
