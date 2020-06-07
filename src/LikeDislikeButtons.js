@@ -9,11 +9,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export default class LikeDislike extends Component {
     constructor(props){
         super(props);
-        this.state = {likes: this.props.currLikes};
+        this.state = {
+            likes: this.props.currLikes,
+            notChanged: true
+        };
     }
 
     addLike = () => {
-        if(!this.props.disabled) {
+        if(!this.props.disabled & this.state.notChanged) {
             let newCount = this.state.likes + 1;
                 this.setState({
                     likes: newCount
@@ -25,12 +28,16 @@ export default class LikeDislike extends Component {
                 snapshot.ref.update({ Likes: newCount})
             });
         }
+        this.setState({
+            notChanged: false
+        });
         this.refs.btnY.setAttribute("disabled", "disabled");
         this.refs.btnN.setAttribute("disabled", "disabled");
     };
 
     addDislike = () => {
-        if(!this.props.disabled) {
+        console.log(this.state.notChanged);
+        if(!this.props.disabled & this.state.notChanged) {
             let newCount = this.state.likes - 1;
                 this.setState({
                     likes: newCount
@@ -42,6 +49,9 @@ export default class LikeDislike extends Component {
                 snapshot.ref.update({ Likes: newCount})
             });
         }
+        this.setState({
+            notChanged: false
+        });
         this.refs.btnN.setAttribute("disabled", "disabled");
         this.refs.btnY.setAttribute("disabled", "disabled");
     };
