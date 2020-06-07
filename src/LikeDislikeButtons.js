@@ -36,7 +36,6 @@ export default class LikeDislike extends Component {
     };
 
     addDislike = () => {
-        console.log(this.state.notChanged);
         if(!this.props.disabled & this.state.notChanged) {
             let newCount = this.state.likes - 1;
                 this.setState({

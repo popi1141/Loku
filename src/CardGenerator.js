@@ -94,7 +94,7 @@ export class LokuCard extends Component {
                 <Card.Text>
                     {storeData.Description}
                     <br></br>
-                    <LikeIndicator path={url} name={this.props.storeData.Name} currLikes={this.props.storeData.Likes} disabled={true}></LikeIndicator>
+                    <LikeIndicator path={url} name={this.props.storeData.Name} currLikes={this.props.storeData.Likes}></LikeIndicator>
                 </Card.Text>
                 </Card.Body>
             </Col>

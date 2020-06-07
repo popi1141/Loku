@@ -6,12 +6,16 @@ import * as firebase from 'firebase/app';
 import 'firebase/database';
 import "firebase/auth";
 import Dislike from './LikeDislikeButtons';
+import CommentBox from './commentBox';
 
 //Creates the restaurant page
 export class LokuPage extends Component {
   constructor(props){
     super(props);
-    this.state = {storeData: undefined};
+    this.state = {
+      storeData: undefined,
+      comment: []
+    };
   }
 
   //Calls Firebase When Component Is Mounted
@@ -27,15 +31,29 @@ export class LokuPage extends Component {
     });
   }
 
+  cardComments(data) {
+    let dataset = data.data.Reviews;
+    let reviewsss = Object.keys(dataset);
+    
+    // creating list of comments
+    let commentSet = reviewsss.map((key) => {
+      let object = dataset[key];
+      return <ReviewCard reviewData={object} key={object.Reviewer}/>;
+    });
+
+    return commentSet;
+  }
+
   render() {
     let data = this.state.storeData;
+    console.log(data);
     //While data is loading
     if(!data) return <Spinner animation="grow" variant="success" className="bigSpinner"/>                                                                                 
     let imgPath = "/img/" + data.Name + ".jpg";
+
+    console.log(data.Reviews);
     //Creates a set of ReviewCard elements
-    let cards = data.Reviews.map((reviewData) => {
-      return <ReviewCard reviewData={reviewData} key={reviewData.Reviewer}/>;
-    });
+
     return (
       <Container fluid className="restosection">
         <Row>
@@ -54,7 +72,8 @@ export class LokuPage extends Component {
           </Col>
         </Row>
         <hr/>
-        {cards}
+        <CommentBox path={this.props.history.location.pathname}></CommentBox>
+        <this.cardComments data={data}></this.cardComments>
       </Container>
     );
   }
