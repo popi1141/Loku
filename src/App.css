@@ -81,43 +81,17 @@ footer {
 }
 
 /* Animation set */
-.card:nth-child(2) {
+.restocard:nth-child(2) {
   animation-delay: 0.25s;
 }
 
-.card:nth-child(3) {
+.restocard:nth-child(3) {
   animation-delay: 0.5s;
 }
 
-.card:nth-child(4) {
+.restocard:nth-child(4) {
   animation-delay: 0.75s;
 }
-
-.card:nth-child(5) {
-  animation-delay: 1s;
-}
-
-.card:nth-child(6) {
-  animation-delay: 1.25s;
-}
-
-.card:nth-child(7) {
-  animation-delay: 1.5s;
-}
-
-.card:nth-child(8) {
-  animation-delay: 1.75s;
-}
-
-.card:nth-child(9) {
-  animation-delay: 2s;
-}
-
-.card:nth-child(10) {
-  animation-delay: 2.25s;
-}
-
-
 
 @keyframes fadeIn {
   from { opacity: 0; }
