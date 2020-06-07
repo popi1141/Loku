@@ -81,7 +81,7 @@ export class LokuCard extends Component {
           return <Redirect push to={url} />
         } 
         return (
-        <Card className="mb-3" onClick={this.handleClick}>
+        <Card className="mb-3 restocard" onClick={this.handleClick}>
             <Row noGutters={true}>
             <Col md="4">
                 <Card.Img src = {imgURL} alt="the business being discussed"/>

@@ -4,12 +4,12 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
-.dropdown-item:active, .dropdown-item:hover, .navbar-dark, .card:hover, footer {
+.dropdown-item:active, .dropdown-item:hover, .navbar-dark, .restocard:hover, footer {
   background-color: #00914d;
 }
 
 
-.dropdown-item:active, .dropdown-item:hover, .navbar-dark, .card:hover, footer, .aboutjumbo, .frontjumbo {
+.dropdown-item:active, .dropdown-item:hover, .navbar-dark, .restocard:hover, footer, .aboutjumbo, .frontjumbo {
   color: white;
 }
 
@@ -80,10 +80,6 @@ footer {
   text-align: center;
 }
 
-.btn-success {
-  margin-top: 1.5%;
-}
-
 /* Animation set */
 .card:nth-child(2) {
   animation-delay: 0.25s;
@@ -101,6 +97,28 @@ footer {
   animation-delay: 1s;
 }
 
+.card:nth-child(6) {
+  animation-delay: 1.25s;
+}
+
+.card:nth-child(7) {
+  animation-delay: 1.5s;
+}
+
+.card:nth-child(8) {
+  animation-delay: 1.75s;
+}
+
+.card:nth-child(9) {
+  animation-delay: 2s;
+}
+
+.card:nth-child(10) {
+  animation-delay: 2.25s;
+}
+
+
+
 @keyframes fadeIn {
   from { opacity: 0; }
   to   { opacity: 1; }
@@ -108,7 +126,7 @@ footer {
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 320px) {
-  .card, .alertSpacer {
+  .restocard, .alertSpacer {
     margin-top: 5%;
     margin-left: 5%;
     margin-right: 5%;
@@ -124,16 +142,18 @@ footer {
     z-index: 1031; /* High z-index so it is on top of the page */
   }
 
-  .card, .alertSpacer {
+  .alertSpacer {
     width: 90%;
   }
+
   .card-img {
-      height: 45vw;
+    height: 45vw;
   }
   .restosection {
     width: 85%;
     margin-left: 7.5%;
     margin-right: 7.5%;
+    margin-bottom: 3%;
     margin-top: 3%;
   } 
   .frontjumbo {
@@ -146,12 +166,9 @@ footer {
 
 /* Medium devices (laptops, 720px and up) */
 @media (min-width: 720px) {
-  .card, .alertSpacer {
+  .restocard, .alertSpacer {
     margin-left: 2%;
     margin-right: 2%;
-  }
-  .card {
-    margin-top: 2%;
   }
   .card-img {
       height: 25vw;
@@ -170,7 +187,7 @@ footer {
 
 /* Medium devices (desktops, 1080px and up) */
 @media (min-width: 1000px) {
-  .card, .alertSpacer {
+  .restocard, .alertSpacer {
     width: 95%;
     margin-top: 1.1%;
   }

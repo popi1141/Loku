@@ -59,10 +59,10 @@ export default class LikeDislike extends Component {
         return (
             <div>
                 <p>Likes: {this.state.likes}</p>
-                <Button ref="btnY" variant="success" className="spacer" onClick={this.addLike}>
-                <FontAwesomeIcon icon={faThumbsUp} /></Button>
+                <Button type="button" ref="btnY" variant="success" className="spacer" onClick={this.addLike}>
+                <FontAwesomeIcon icon={faThumbsUp} /> Like </Button>
                 <Button ref="btnN" variant="success" onClick={this.addDislike}>
-                <FontAwesomeIcon icon={faThumbsDown} /> </Button>
+                <FontAwesomeIcon icon={faThumbsDown} /> Dislike </Button>
             </div>
                 
         )

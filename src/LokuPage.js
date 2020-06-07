@@ -24,7 +24,7 @@ export class LokuPage extends Component {
     let category = this.props.match.params.categoryName; 
     let businessName = this.props.match.params.businessName; 
     let firebaseRef = firebase.database().ref();
-    firebaseRef.once('value', (snapshot) => {
+    firebaseRef.on('value', (snapshot) => {
         let database = snapshot.val();
         let storeObj =  _.find(database[city][category], {Name: businessName});
         this.setState({storeData: storeObj});
@@ -33,14 +33,11 @@ export class LokuPage extends Component {
 
   cardComments(data) {
     let dataset = data.data.Reviews;
-    let reviewsss = Object.keys(dataset);
-
-    // creating list of comments
-    let commentSet = reviewsss.map((key) => {
-      let object = dataset[key];
-      return <ReviewCard reviewData={object} key={object.Reviewer}/>;
+    let reviews = Object.keys(dataset);
+    let commentSet = reviews.map((key) => {
+      let reviewObject = dataset[key];
+      return <ReviewCard reviewData={reviewObject} key={reviewObject.Reviewer}/>;
     });
-
     return commentSet;
   }
 
@@ -50,7 +47,6 @@ export class LokuPage extends Component {
     //While data is loading
     if(!data) return <Spinner animation="grow" variant="success" className="bigSpinner"/>                                                                                 
     let imgPath = "/img/" + data.Name + ".jpg";
-
     return (
       <Container fluid className="restosection">
         <Row>
@@ -69,8 +65,12 @@ export class LokuPage extends Component {
           </Col>
         </Row>
         <hr/>
-        <CommentBox path={this.props.history.location.pathname}></CommentBox>
-        <this.cardComments data={data}></this.cardComments>
+        <div className="review-box">
+          <h3> Reviews </h3>
+          <this.cardComments data={data}/>
+        </div>
+        <hr/>
+        <CommentBox path={this.props.history.location.pathname}/>
       </Container>
     );
   }
@@ -80,14 +80,12 @@ export class LokuPage extends Component {
 export class ReviewCard extends Component {
   render() {
     return (
-      <Container>
-        <Card className="mb-2">
+        <Card className="mb-3">
           <Card.Body> 
             <Card.Title>{this.props.reviewData.Reviewer}</Card.Title>
             <Card.Text>{this.props.reviewData.ReviewText}</Card.Text>
           </Card.Body> 
         </Card>
-      </Container>
     );
   }
 }
