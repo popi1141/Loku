@@ -26,7 +26,6 @@ export default class LikeButton extends React.Component {
             this.refs.btn.setAttribute("disabled", "disabled");
         }
     };
-    
     componentDidMount() {
 
     }
