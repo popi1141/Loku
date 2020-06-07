@@ -55,7 +55,7 @@ export class LokuPage extends Component {
           </Col>
           <Col md="8">
             <h1> {data.Name} </h1>
-            <p className="deliverytext"> Pickup and Contactless Takeout </p>
+            <h2 className="deliverytext"> Pickup and Contactless Takeout </h2>
             <ul>
               <li> Location: {data.Location} </li> 
               <li> Hours: {data.Hours} </li> 
