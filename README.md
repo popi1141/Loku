@@ -1,3 +1,8 @@
+Loku is a small business forum where users can support and checkout small businesses in their communities. We provide the advertising and patrons provide the business. 
+
+Here is a link to our project: https://loku-f7157.firebaseapp.com/ 
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
